@@ -1,0 +1,548 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Verdana", sans-serif;
+  /* Erst wenn section2 fertig: 
+    bewirkt, dass wenn wir über die navbar zur entsprechenden 
+    Stelle/section auf unserer Seite springen, dass es eben
+    nicht so ruckartig passiert sondern eben smooth, geschmeidig*/
+  scroll-behavior: smooth;
+}
+
+p {
+  font-weight: 300;
+  color: #111;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+}
+
+header .logo {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+header .logo span {
+  color: #5308df;
+}
+
+header .navigation {
+  position: relative;
+  display: flex;
+}
+
+header .navigation li {
+  list-style: none;
+  margin-left: 30px;
+}
+
+header .navigation li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+}
+
+header .navigation li a:hover {
+  color: #5308df;
+}
+
+.btn {
+  font-size: 1em;
+  color: #fff;
+  background: #5308df;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  letter-spacing: 6px;
+}
+
+section {
+  padding: 100px;
+}
+
+/* Section 1 - Home */
+.home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(32, 32, 32, 0.4), rgba(32, 32, 32, 0.4)),
+    url(img/about-img.jpg); /* rgb(78, 69, 69); */
+  background-size: cover;
+}
+
+.home .content {
+  max-width: 900px;
+  text-align: center;
+}
+
+.home .content h2 {
+  font-size: 5em;
+  color: #fff;
+  margin: 40px 0;
+}
+
+.home .content p {
+  font-size: 1em;
+  color: #fff;
+  margin: 40px 0;
+}
+
+/* Section 2 - Über uns */
+.row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.row .col50 {
+  position: relative;
+  width: 40%;
+}
+
+.titleText {
+  color: #111;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.titleText span {
+  color: #5308df;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.row .col50 .imgBx {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  /* height: 100%; */
+}
+
+.row .col50 .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Section 3 - Speisen*/
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btnPart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.speisen .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.speisen .content .bereich {
+  width: 100%;
+  border: 15px solid #fff;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+  margin: 12px 0;
+}
+
+.speisen .content .bereich .bereich-kopf .kopf-oben {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  cursor: pointer;
+
+  font-weight: 600;
+  color: #111;
+}
+
+.speisen .content .bereich .bereich-kopf .kopf-unten {
+  margin-top: 12px;
+  margin-left: 300px;
+
+  cursor: pointer;
+}
+
+.speisen .content .bereich .bereich-korper {
+  display: none;
+}
+.speisen .content .bereich .bereich-korper.active {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.speisen .content .box {
+  width: 440px;
+  margin: 20px;
+  border: 15px solid #fff;
+  /* Horizontaler Versatz | Vertikaler Versatz | Verwischung des Schatten | Farbe des Schatten*/
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* .speisen .content .box:hover {
+  width: 500px;
+  height: 400px; /* Original: 353px
+  z-index: 5;
+} */
+
+.speisen .content .box .imgBx {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.speisen .content .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* .speisen .content .box .imgBx img:hover {
+  width: 110%;
+  height: 110%; /*Original: 353px
+  z-index: 5;
+} */
+
+.speisen .content .box .text {
+  padding: 15px 0 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.speisen .content .box .text .btn {
+  border: none;
+  margin-top: 0;
+  cursor: pointer;
+}
+
+.speisen .content .box .text h3 {
+  font-weight: 400;
+  color: #111;
+}
+
+/* Section 4 - Kundenrezensionen*/
+.kundenrez .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
+.kundenrez .content .box {
+  width: 340px;
+  margin: 20px;
+  padding: 40px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  /* Kopiere diesen Teil von oben - Zeile 187-189 */
+  border: 15px solid #fff;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+}
+
+.kundenrez .content .box .imgBx {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  /* border: 2px solid black; */
+}
+
+.kundenrez .content .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kundenrez .content .box .text {
+  text-align: center;
+}
+
+.kundenrez .content .box .text p {
+  color: #666;
+  font-style: italic;
+}
+
+.kundenrez .content .box .text h3 {
+  margin-top: 20px;
+  color: #5308df;
+}
+
+/* Section 5 - Kontakt */
+.kontaktForm {
+  padding: 60px 50px;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.kontaktForm h3 {
+  color: #111;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.kontaktForm .inputBox {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.kontaktForm .inputBox input,
+.kontaktForm .inputBox textarea {
+  width: 100%;
+  border: 1px solid #555;
+  padding: 10px;
+  color: #111;
+  font-size: 16px;
+  font-weight: 300;
+  resize: none;
+}
+
+.kontaktForm .inputBox input[type="submit"] {
+  font-size: 1em;
+  color: #fff;
+  background: #5308df;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  max-width: 100px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+/* Copyright */
+.copyrightText {
+  padding: 15px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.copyrightText p {
+  color: #111;
+}
+
+.copyrightText a {
+  color: #111;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 20px;
+}
+
+.copyrightText a.footer-restaurant-name {
+  color: #5308df;
+}
+
+/* sticky-Regeln: */
+header.sticky {
+  background: #fff;
+  padding: 10px 100px;
+}
+
+header.sticky .logo {
+  color: #111;
+}
+
+header.sticky .navigation li a,
+header.sticky .navigation li button {
+  color: #111;
+}
+
+header.sticky .navigation li button.active {
+  color: #5308df;
+}
+
+.menuToggle {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  header,
+  header.sticky {
+    padding: 10px 20px;
+  }
+
+  header .logo {
+    z-index: 20;
+  }
+
+  header .navigation {
+    display: none;
+  }
+
+  header .navigation.active {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+  }
+
+  header .navigation li {
+    margin-top: 24px;
+    margin-left: 0;
+  }
+
+  header .navigation li a {
+    text-decoration: none;
+    color: #111;
+    font-size: 1.6em;
+    font-weight: 30;
+  }
+  header .navigation li a:hover {
+    color: #5308df;
+  }
+
+  .menuToggle {
+    padding-top: 10px;
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    /* background: url(img/menu.png); /* black 
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center; */
+    cursor: pointer;
+  }
+  .menuToggle span {
+    color: gray;
+  }
+
+  /* .menuToggle.active {
+    background: url(img/close.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+  } */
+
+  header.sticky .menuToggle {
+    filter: invert(1);
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  .home .content h2 {
+    font-size: 3em;
+    color: #fff;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .row .col50 {
+    position: relative;
+    width: 100%;
+  }
+
+  .row .col50 .imgBx {
+    height: 300px;
+    margin-top: 20px;
+  }
+
+  .speisen .content {
+    margin-top: 20px;
+  }
+
+  .speisen .content .box {
+    margin: 10px;
+  }
+
+  .speisen .content .box .imgBx {
+    height: 260px;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .titleText {
+    font-size: 1.8em;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+    font-weight: 300;
+  }
+
+  .kundenrez .content .box {
+    margin: 10px;
+    padding: 20px;
+  }
+
+  .kontaktForm {
+    padding: 35px 40px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .speisen .content .bereich .bereich-kopf .kopf-unten {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home .content h2 {
+    font-size: 2.2em;
+    color: #fff;
+  }
+}
