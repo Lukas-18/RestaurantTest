@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Slemani Grill Restaurant</title>
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+	<style>
+		header ul li button{
+			border: none;
+			background-color: transparent;
+			text-decoration: none;
+			color: #fff;
+			font-size: 1em;
+			font-weight: 300;
+			cursor: pointer;
+		}
+		header ul li button.active{
+			color: #5308df;;
+			font-weight: 900;
+			font-size: 1em;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<a href="#" class="logo">Slemani <span>Grill</span> Restaurant</a>
+		<!-- Nächster div wird für später wichtig, wenn wirs responsiv machen -->
+		<div class="menuToggle" onclick="toggleMenu();">
+            <span class="material-icons">
+            menu 
+            </span>
+        </div>
+		<ul class="navigation"> <!--onclick erst ganz zum schluss einfügen als allerletztes-->
+			<li><a href="#home" onclick="toggleMenu();">Home</a></li> <!-- Shift + alt + Down-Pfeil -->
+			<li><a href="#ueberUns" onclick="toggleMenu();" id="ID_001">Über uns</a></li>
+			<li><a href="#speisen" onclick="toggleMenu();" id="ID_002">Speisen</a></li>
+			<li><a href="#kundenrez" onclick="toggleMenu();" id="ID_003">Kundenrezensionen</a></li>
+			<li><a href="#kontakt" onclick="toggleMenu();" id="ID_004">Kontakt</a></li>
+			<li><button id="btn_DE" class="active">DE</button> <button id="btn_EN">EN</button></li>
+		</ul>
+	</header>
+
+
+<!-- Section 1 - Home -->
+	<div class="video">
+		<video autoplay muted loop>
+			<source src="vid/video.mp4" type="video/mp4">
+		</video>
+	</div>
+	<section class="home" id="home">
+		<div class="content">
+			<h2>Slemani Grill Restaurant</h2>
+			<p id="ID_005">Immer lecker!</p>
+			<a href="#speisen" class="btn" id="ID_006">Speisekarte</a>	
+		</div>
+	</section>
+
+
+<!-- Section 2 - Über uns -->
+	<section class="ueberUns" id="ueberUns" style="padding-top: 200px;">
+		<div class="row">
+			<div class="col50">
+				<h2 class="titleText" id="ID_007"><span>Ü</span>ber uns</h2>
+				<p id="ID_008">BESCHREIBUNG AUF DEUTSCH
+					<br>
+					<br>
+					UND NOCH MEHR BESCHREIBUNG
+				</p>
+			</div>
+
+			<div class="col50">
+				<div class="imgBx">
+					<img src="img/uber-uns.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+<!-- Section 3 - speisen -->
+	<section class="speisen" id="speisen">
+		<div class="title">
+			<h2 class="titleText" id="ID_009">Unsere <span>S</span>peisen</h2>
+			<p id="ID_010">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+			
+			<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn"  id="ID_010a">Bestellen (über Lieferando)</a> 
+		</div>
+
+		<div class="content">
+
+			<!-- Beliebte Gerichte -->
+			<div class="bereich">
+				<div class="bereich-kopf"> 
+					<div class="kopf-oben">
+						<h2>Beliebte Gerichte</h2>
+						<span class="material-icons">
+							expand_more
+						</span>
+					</div>
+					<div class="kopf-unten">
+						<p></p>
+					</div>
+				</div>
+				<div class="bereich-korper active">
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu1.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_00_1">Kebabspieß <br>11,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+					
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu2.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_00_2">Labnah mit Gurke <br>4,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu2.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_00_3">Vorspeisen Teller <br>12,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Suppen -->
+			<div class="bereich">
+				<div class="bereich-kopf"> 
+					<div class="kopf-oben">
+						<h2>Suppen</h2>
+						<span class="material-icons">
+							expand_more
+						</span>
+					</div>
+					<div class="kopf-unten">
+						<p></p>
+					</div>
+				</div>
+				<div class="bereich-korper">
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu1.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_001">Linsensuppe <br>4,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+					
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu2.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_002">Okraschotensuppe <br>5,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Kalte Vorspeisen -->
+			<div class="bereich">
+				<div class="bereich-kopf">
+					<div class="kopf-oben">
+						<h2>Kalte Vorspeisen</h2>
+						<span class="material-icons">
+							expand_more
+						</span>
+					</div>
+					<div class="kopf-unten">
+						<p></p>
+					</div>
+				</div>
+				<div class="bereich-korper">
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu3.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_003">Vorspeisen Teller <br>12,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu4.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_004">Warak inab mahshi <br>5,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu5.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_005">Hummus <br>5,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_006">Lamm Hummus <br>9,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_007">Mutabbal <br>5,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_008">Muhammara (scharf) <br>5,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_009">Taboulah <br>5,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_010">Labnah mit Gurke <br>4,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_011">Joghurt mit Knoblauch <br>5,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_012">Knoblauch Dip mit Joghurt <br>6,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_013">Fattusch <br>8,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_014">Chicken Salat <br>10,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Frühstück -->
+			<div class="bereich">
+				<div class="bereich-kopf">
+					<div class="kopf-oben">
+						<h2>Frühstück</h2>
+						<span class="material-icons">
+							expand_more
+						</span>
+					</div>
+					<div class="kopf-unten">
+						<p></p>
+					</div>
+				</div>
+				<div class="bereich-korper">
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_015">Favabohnen <br>9,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_016">Spiegelei <br>9,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_017">Mekhlama <br>9,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_018">Gemahlene Favabohnen <br>9,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_019">Zwei Käsesorten <br>9,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_020">Falafel <br>9,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_021">Patscha komplett <br>15,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_022">Butter <br>1,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_023">Marmelade <br>1,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_024">Honig <br>1,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_025">Käse <br>1,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Orientalische Hauptspeisen -->
+			<div class="bereich">
+				<div class="bereich-kopf">
+					<div class="kopf-oben">
+						<h2>Orientalische Hauptspeisen</h2>
+						<span class="material-icons">
+							expand_more
+						</span>
+					</div>
+					<div class="kopf-unten">
+						<p>Alle Gerichte werden mit frisch gemachtem Fladenbrot zubereitet.</p>
+					</div>
+				</div>
+
+				<div class="bereich-korper">
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_026">Tashreeb Lammfleisch <br>10,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_027">Kebsah Lamm <br>15,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_028">Kebsah Hähnchen <br>15,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_029">Biryani Hähnchen <br>15,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_030">Biryani Lamm <br>15,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_031">Mendi Hähnchen <br>15,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_032">Mendi Lamm <br>15,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_033">Qozi Lamm <br>13,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_034">Qozi Hähnchen <br>13,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_035">Tschrib mit Reis <br>14,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_036">Reis mit Suppe <br>7,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_037">Kubba Teller <br>9,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_038">Falafel Teller <br>6,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_039">Döner Teller <br>9,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Grillspezialitäten -->
+			<div class="bereich">
+				<div class="bereich-kopf">
+					<div class="kopf-oben">
+						<h2>Grillspezialitäten</h2>
+						<span class="material-icons">
+							expand_more
+						</span>
+					</div>
+					<div class="kopf-unten">
+						<p>Alle Gerichte werden mit frisch gemachtem Fladenbrot zubereitet.</p>
+					</div>
+				</div>
+
+				<div class="bereich-korper">
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_040">Gegrilltes Lamm-Herz <br>11,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_041">Kebabspieß <br>11,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_042">Grillfleisch Spieß <br>12,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_043">Lammkotelett <br>16,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_044">Hähnchen Kebab <br>11,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_045">Gegrilltes halbes Hähnchen <br>10,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_046">Gegrillte Hähnchenbrust <br>11,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_047">Gegrillte Lamm-Hoden <br>11,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Fisch Gerichte -->
+			<div class="bereich">
+				<div class="bereich-kopf">
+					<div class="kopf-oben">
+						<h2>Fisch Gerichte</h2>
+						<span class="material-icons">
+							expand_more
+						</span>
+					</div>
+					<div class="kopf-unten">
+						<p></p>
+					</div>
+				</div>
+				<div class="bereich-korper">
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_048">Dorade Royal <br>14,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Dürüm -->
+			<div class="bereich">
+				<div class="bereich-kopf">
+					<div class="kopf-oben">
+						<h2>Dürüm</h2>
+						<span class="material-icons">
+							expand_more
+						</span>
+					</div>
+					<div class="kopf-unten">
+						<p>Alle Gerichte werden mit Tomaten, grünem Salat, Zwiebeln und frisch gemachtem Fladenbrot zubereitet.</p>
+					</div>
+				</div>
+				<div class="bereich-korper">
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_049">Döner Dürüm <br>5,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_050">Falafel Dürüm <br>5,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_051">Halloumi Dürüm <br>5,90€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Beilagen -->
+			<div class="bereich">
+				<div class="bereich-kopf">
+					<div class="kopf-oben">
+						<h2>Beilagen</h2>
+						<span class="material-icons">
+							expand_more
+						</span>
+					</div>
+					<div class="kopf-unten">
+						<p></p>
+					</div>
+				</div>
+				<div class="bereich-korper">
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_052">Pommes frites <br>4,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_053">Reis <br>5,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_054">Tomaten-Spieß (gegrillt) <br>3,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_055">Fladenbrot <br>0,50€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+
+			<!-- Alkoholfreie Getränke -->
+			<div class="bereich">
+				<div class="bereich-kopf">
+					<div class="kopf-oben">
+						<h2>Alkoholfreie Getränke</h2>
+						<span class="material-icons">
+							expand_more
+						</span>
+					</div>
+					<div class="kopf-unten">
+						<p></p>
+					</div>
+				</div>
+				<div class="bereich-korper">
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_056">Ayran klein 0,25l <br>1,50€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_057">Ayran groß 0,33l <br>2,50€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_058">Coca-Cola 0,33l (EINWEG) <br>2,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_059">Coca-Cola Zero Sugar 0,33l (EINWEG) <br>2,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_060">Coca-Cola light taste 0,33l (EINWEG) <br>2,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_061">Mezzo Mix 0,33l (EINWEG) <br>2,00€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_062">Stilles Wasser 0,5l <br>2,50€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_063">Mineralwasser 0,5l <br>2,50€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_064">A.C.E. 0,5l <br>2,50€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_065">Apfelsaft 0,5l <br>2,50€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+
+					<div class="box">
+						<div class="imgBx">
+							<img src="img/menu6.jpg" alt="">
+						</div>
+						<div class="text">
+							<h3 id="SPEISE_061">Apfelschorle 0,5l <br>2,50€</h3>
+							<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn">Bestellen</a>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+
+		</div>
+		</div>
+
+		<div class="btnPart">
+			<!-- Style für btn-Klasse haben wir schon festgelegt -->
+			<a href="https://www.slemani-grill-restaurant.de/#cat2" class="btn"  id="ID_011">Bestellen (über Lieferando)</a>  <!-- Evtl. innerhalb vom öfnenden a-Element:  target="_blank"-->
+		</div>
+	</section>
+
+
+<!-- Section 4 - Kundenrezensionen -->
+	<section class="kundenrez" id="kundenrez">
+		<!-- von oben Kopieren und h2-Inhalt abändern -->
+		<div class="title">
+			<h2 class="titleText" id="ID_012"><span>K</span>undenrezensionen</h2>
+			<p id="ID_013">Das sagen unsere Kunden:</p>
+		</div>
+
+		<div class="content">
+			<div class="box">
+				<div class="imgBx">
+					<img src="img/kunde1.jpg" alt="">
+				</div>
+				<div class="text">
+					<p id="ID_014">Essen war sehr lecker danke</p>
+					<h3>Soran Salih</h3>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="imgBx">
+					<img src="img/kunde1.jpg" alt="">
+				</div>
+				<div class="text">
+					<p id="ID_015">Erstklassig, spitzenmäßig. Frisches Essen. Große Menge. So angenehm. Ich denke, sie kochen ihr Essen mit viel Liebe, das zeigt sich, wenn man es probiert.</p>
+					<h3>Sabrina Sarker</h3>
+				</div>
+			</div>
+
+			<div class="box">
+				<div class="imgBx">
+					<img src="img/kunde1.jpg" alt="">
+				</div>
+				<div class="text">
+					<p id="ID_016">Sehr sehr gut</p>
+					<h3>Ricardo Peixoto</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+<!-- Section 5 - Kontakt -->
+	<section class="kontakt" id="kontakt">
+		<!-- von oben Kopieren und h2-Inhalt abändern -->
+		<div class="title">
+			<h2 class="titleText"><span>C</span>ontact Us</h2>
+		</div>
+
+		<!-- <div class="kontaktForm">
+			<h3>Send Message</h3>
+			<div class="inputBox">
+				<input type="text" placeholder="Name">
+			</div>
+			<div class="inputBox">
+				<input type="text" placeholder="Email">
+			</div>
+			<div class="inputBox">
+				<textarea placeholder="Message"></textarea>
+			</div>
+			<div class="inputBox">
+				<input type="submit" value="Send">
+			</div>
+		</div> -->
+
+		<div class="kontaktForm">
+			<h3> 
+				Slemani Grill Restaurant <br>
+				Dachauer Str. 7 <br>
+				80335 München
+			</h3>
+			<br>
+			<br>
+			<h3>
+				Telefon: <br>
+				08954862996
+			</h3>
+		</div>
+	</section>
+
+
+	<!-- Copyright -->
+	<div class="copyrightText">
+		<p><a class="footer-restaurant-name" href="#">Slemani Grill Restaurant</a> <a href="impressum.html">Impressum</a> <a href="datenschutz.html">Datenschutz</a></p>
+	</div>
+
+
+	<!-- Strg + K + C zum kommentieren -->
+	<!-- Am Ende das, um die Navbar "interessanter" zu machen
+	und in style.css die ganzen .sticky Anweisungen -->
+	<script type="text/javascript">
+		window.addEventListener('scroll', function(){
+			const header = document.querySelector('header');
+			header.classList.toggle('sticky', window.scrollY > 0);
+		});
+
+		/* Erst bei responsive machen */
+		let counter = 0;
+		function toggleMenu(){
+			// const menuToggle = document.querySelector('.menuToggle');
+			const navigation = document.querySelector('.navigation');
+			// menuToggle.classList.toggle('active');
+			navigation.classList.toggle('active');
+
+			counter++;
+			const menuToggle = document.querySelector('.menuToggle span');
+			if(counter%2===0){
+				menuToggle.innerText = "menu";
+			}else{
+				menuToggle.innerText = "close";
+			}
+		}
+	</script>
+
+	<!-- Speisen jeweiligen bereich größer machen -->
+	<script>
+		let arrBereichKopf = document.querySelectorAll(".speisen .content .bereich .bereich-kopf");
+		let arrBereichKorper = document.querySelectorAll(".speisen .content .bereich .bereich-korper");
+
+		for(let i = 0; i < arrBereichKopf.length; i++){
+			arrBereichKopf[i].addEventListener("click", () => {
+				arrBereichKorper[i].classList.toggle("active");
+			});
+		}
+	</script>
+
+<!-- In anderer Sprache anzeigen -->
+	<script src="scripts/writeInDE.js"></script>
+	<script src="scripts/writeInEN.js"></script>
+</body>
+</html>
